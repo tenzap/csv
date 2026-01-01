@@ -7,7 +7,7 @@ on:
 jobs:
     linux_tests:
         name: PHP on ${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.composer-flags }}
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-24.04
         strategy:
             matrix:
                 php: ['8.4']
