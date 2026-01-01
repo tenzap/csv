@@ -47,13 +47,13 @@ jobs:
               run: composer phpunit -- ${{ matrix.phpunit-flags }}
 
             - name: Run Unit tests with coverage debian1
-              run: composer phpunit:debian1 -- ${{ matrix.phpunit-flags }}
+              run: php -r 'xdebug_info();' && composer phpunit:debian1 -- ${{ matrix.phpunit-flags }}
 
             - name: Run Unit tests with coverage debian2
-              run: composer phpunit:debian2 -- ${{ matrix.phpunit-flags }}
+              run: php -r 'xdebug_info();' && composer phpunit:debian2 -- ${{ matrix.phpunit-flags }}
 
             - name: Run Unit tests with coverage debian3
-              run: composer phpunit:debian3 -- ${{ matrix.phpunit-flags }}
+              run:  php -r 'xdebug_info();' && composer phpunit:debian3 -- ${{ matrix.phpunit-flags }}
 
             - name: Run static analysis
               run: composer phpstan-build
