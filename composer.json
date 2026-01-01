@@ -55,6 +55,7 @@
         "phpstan-build": "phpstan analyse -c phpstan-build.neon --ansi --memory-limit=256M",
         "phpunit:debian1": "phpunit --exclude-group network --no-coverage",
         "phpunit:debian2": "XDEBUG_MODE=debug phpunit --exclude-group network --no-coverage",
+        "phpunit:debian3": "XDEBUG_MODE=develop phpunit --exclude-group network --no-coverage",
         "phpunit": "XDEBUG_MODE=coverage phpunit --coverage-text",
         "phpunit:min": "phpunit --no-coverage",
         "test": [

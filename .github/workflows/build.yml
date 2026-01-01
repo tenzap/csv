@@ -52,6 +52,9 @@ jobs:
             - name: Run Unit tests with coverage debian2
               run: composer phpunit:debian2 -- ${{ matrix.phpunit-flags }}
 
+            - name: Run Unit tests with coverage debian3
+              run: composer phpunit:debian3 -- ${{ matrix.phpunit-flags }}
+
             - name: Run static analysis
               run: composer phpstan-build
               if: ${{ matrix.php == '8.4' && matrix.stability == 'prefer-stable'}}
